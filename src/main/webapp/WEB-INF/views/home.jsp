@@ -12,23 +12,23 @@
 		Guest Book!
 	</h1>
 
+<form action="addText" method="post">
+	<input type="text" placeholder="E-mail" name="email">
+	<input type="password" placeholder="Password" name="passwd">
+	<input type="text" placeholder="Contents" name="text">
+	<input type="submit" value="submit">
+</form>
+
 <table>
-	<thead>
-		<tr>
-			<td><input type="text" placeholder="E-mail"></td>
-			<td><input type="password" placeholder="Password"></td>
-			<td><input type="text" placeholder="Contents"></td>
-			<td><input type="button" value="submit"></td>
-		</tr>
-	</thead>
 	<tbody>
 		<tr>
-			<td><p>E-mail</p></td>
-			<td><p>contents</p></td>
-			<td><p>update</p></td>
-			<td><p>delete</p></td>
+			<td><p>${guestbook.email }</p></td>
+			<td><p>${guestbook.text }</p></td>
+			<td><p></p></td>
+			<td><p></p></td>
 		</tr>
 	</tbody>
 </table>
+
 </body>
 </html>
