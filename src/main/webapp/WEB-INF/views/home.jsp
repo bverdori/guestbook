@@ -21,12 +21,14 @@
 
 <table>
 	<tbody>
+		<c:forEach var="guestbook" items="${guestBookList}">
 		<tr>
-			<td><p>${guestbook.email }</p></td>
-			<td><p>${guestbook.text }</p></td>
-			<td><p></p></td>
-			<td><p></p></td>
+			<td><p>${guestbook.no}</p></td>
+			<td><p>${guestbook.email}</p></td>
+			<td><p>${guestbook.text}</p></td>
+			<td><p>${guestbook.regdate}</p></td>
 		</tr>
+		</c:forEach>
 	</tbody>
 </table>
 

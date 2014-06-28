@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<!--여기는 매핑할 GuestBookMapper.java의 풀패키지명을 적어준다 -->
+<mapper namespace="com.guest.app.GuestBookMapper">
+ 
+    <resultMap type="GuestBook" id="GuestBookResultMap">
+    	<result property="no" column="no" />
+        <result property="email" column="email" />
+        <result property="passwd" column="passwd" />
+        <result property="txt" column="txt" />
+        <result property="regdate" column="regdate" />
+    </resultMap>
+ 
+    <!-- id의 경우에는 Mapper.java에 동일하게 사용해야된다. -->
+    <select id="getGuestBooks" resultMap="GuestBookResultMap">
+        SELECT * FROM guestbook
+    </select>
+    
+</mapper>

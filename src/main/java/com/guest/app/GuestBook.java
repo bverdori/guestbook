@@ -1,11 +1,19 @@
-package com.bver.guestbook;
+package com.guest.app;
 
 public class GuestBook {
+	private int no;
 	private String email;
 	private String passwd;
-	private String text;
+	private String txt;
 	private String regdate;
+	private String update;
 	
+	public int getNo() {
+		return no;
+	}
+	public void setNo(int no) {
+		this.no = no;
+	}
 	public String getEmail() {
 		return email;
 	}
@@ -18,16 +26,22 @@ public class GuestBook {
 	public void setPasswd(String passwd) {
 		this.passwd = passwd;
 	}
-	public String getText() {
-		return text;
+	public String getTxt() {
+		return txt;
 	}
-	public void setText(String text) {
-		this.text = text;
+	public void setTxt(String txt) {
+		this.txt = txt;
 	}
 	public String getRegdate() {
 		return regdate;
 	}
 	public void setRegdate(String regdate) {
 		this.regdate = regdate;
+	}
+	public String getUpdate() {
+		return update;
+	}
+	public void setUpdate(String update) {
+		this.update = update;
 	}
 }
