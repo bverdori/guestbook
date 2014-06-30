@@ -1,17 +1,17 @@
 package com.guest.app;
 
 public class GuestBook {
-	private int no;
+	private String no;
 	private String email;
 	private String passwd;
 	private String txt;
 	private String regdate;
-	private String update;
+	private String modified;
 	
-	public int getNo() {
+	public String getNo() {
 		return no;
 	}
-	public void setNo(int no) {
+	public void setNo(String no) {
 		this.no = no;
 	}
 	public String getEmail() {
@@ -38,10 +38,10 @@ public class GuestBook {
 	public void setRegdate(String regdate) {
 		this.regdate = regdate;
 	}
-	public String getUpdate() {
-		return update;
+	public String getModified() {
+		return modified;
 	}
-	public void setUpdate(String update) {
-		this.update = update;
+	public void setModified(String modified) {
+		this.modified = modified;
 	}
 }

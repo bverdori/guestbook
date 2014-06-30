@@ -31,4 +31,17 @@ public class GuestBookDAOService implements GuestBookDAO {
 		
 	}
 
+	@Override
+	public void updateGuestBook(GuestBook guestBook) {
+		GuestBookMapper guestBookMapper = sqlSession.getMapper(GuestBookMapper.class);
+		guestBookMapper.updateGuestBook(guestBook);
+		
+	}
+
+	@Override
+	public void deleteGuestBook(GuestBook guestBook) {
+		GuestBookMapper guestBookMapper = sqlSession.getMapper(GuestBookMapper.class);
+		guestBookMapper.deleteGuestBook(guestBook);
+	}
+
 }
