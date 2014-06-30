@@ -4,7 +4,6 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.guest</groupId>
 	<artifactId>app</artifactId>
-	<name>GuestBook</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<properties>
@@ -173,4 +172,5 @@
 			</plugin>
 		</plugins>
 	</build>
+	<name>guestbook</name>
 </project>

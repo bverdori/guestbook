@@ -17,7 +17,7 @@
  
     <!-- id의 경우에는 Mapper.java에 동일하게 사용해야된다. -->
     <select id="getGuestBooks" resultMap="GuestBookResultMap">
-        SELECT * FROM guestbook
+        SELECT * FROM guestbook ORDER BY [no] DESC
     </select>
     
     <!-- parameterType 에는 구문에 전달될 파라미터의 패키지 경로를 포함한 전체 클래명이나 별칭이 들어간다  -->
@@ -25,13 +25,15 @@
         INSERT INTO guestbook(email, passwd, txt, regdate, modified) values(#{email},#{passwd},#{txt},#{regdate},#{modified})
 	</insert>
 	
-	<update id="updateGuestBook" parameterType="com.guest.app.GuestBook">
+	<!-- parameterType 에는 구문에 전달될 파라미터의 패키지 경로를 포함한 전체 클래명이나 별칭이 들어간다  -->
+    <update id="updateGuestBook" parameterType="com.guest.app.GuestBook">
 		UPDATE guestbook 
 		SET txt=#{txt},modified=#{modified} 
 		WHERE [no]=#{no} AND passwd = #{passwd}
 	</update>
 	
-	<delete id="deleteGuestBook" parameterType="com.guest.app.GuestBook">
+	<!-- parameterType 에는 구문에 전달될 파라미터의 패키지 경로를 포함한 전체 클래명이나 별칭이 들어간다  -->
+    <delete id="deleteGuestBook" parameterType="com.guest.app.GuestBook">
 		DELETE FROM guestbook WHERE [no]=#{no}
 	</delete>
 </mapper>

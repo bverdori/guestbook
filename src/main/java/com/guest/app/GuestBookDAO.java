@@ -3,8 +3,8 @@ package com.guest.app;
 import java.util.ArrayList;
 
 public interface GuestBookDAO {
-	public ArrayList<GuestBook> getGuestBooks();
-	void insertGuestBook(GuestBook guestBook);
-	void updateGuestBook(GuestBook guestBook);
-	void deleteGuestBook(GuestBook guestBook);
+	ArrayList<GuestBook> getGuestBooks();			// 방명록 목록 보기
+	void insertGuestBook(GuestBook guestBook);		// 방명록 내용 삽입
+	void updateGuestBook(GuestBook guestBook);		// 방명록 내용 수정
+	void deleteGuestBook(GuestBook guestBook);		// 방명록 내용 삭제
 }
